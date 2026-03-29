@@ -2,6 +2,7 @@ name: Site Update Checker
 on:
   schedule:
     - cron: '0 * * * *' # 1時間おきに実行
+      timezone: 'Asia/Tokyo' # 日本時間で実行
   workflow_dispatch:      # 手動実行ボタンも出しておく（テスト用）
 
 jobs:
