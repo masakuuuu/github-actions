@@ -1,0 +1,16 @@
+name: Site Update Checker
+on:
+  schedule:
+    - cron: '0 * * * *' # 1時間おきに実行
+  workflow_dispatch:      # 手動実行ボタンも出しておく（テスト用）
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+      - name: Run checker
+        run: go run main.go
