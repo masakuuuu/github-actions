@@ -1,4 +1,4 @@
-name: Site Update Checker
+name: Go Script Cron Job
 on:
   schedule:
     - cron: '0 * * * *' # 1時間おきに実行
